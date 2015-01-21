@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<title>E+L Photos</title>
+	<link rel="icon" type="image/png" href="img/icon.png">
+	<link href="css/main.css" type="text/css" media="screen" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+	
+	<script src="js/vegas/jquery.vegas.js" type="text/javascript"></script>
+	<link href="js/vegas/jquery.vegas.css" type="text/css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+</head>
+<body>
+	<div id="menu">
+		<h1><a href="index.html">E<b>+</b>L</a></h1>
+		<div>
+			<ul>
+				<li class="cur"><a href="ceremony.html">CELEBRATION</a></li>
+				<li><a href="kalamazoo.html">OUR STORY</a></li>
+				<li><a href="photos.html">PHOTOS</a></li>
+				<li><a href="rsvp.html">RSVP</a></li>
+			</ul>
+			<ul>
+				<li><a href="ceremony.html">CEREMONY</a></li>
+				<li><a href="reception.html">RECEPTION</a></li>
+				<li><a href="hotel.html">HOTEL</a></li>
+				<li class="cur"><a href="sundries.html">SUNDRIES</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="cont">
+		<div class="box">
+			<div>
+				<form action="mailer.php" id="contact_form" method="post">
+					<ul class="form">
+						<li class="short">
+							<label>Full Name<span class="required"></span></label>
+							<input type="text" name="first" id="first" value="First Name" 
+							class="requiredField" onblur="if(this.value == '') { this.value = 'First Name'; }" 
+							onfocus="if(this.value == 'First Name') { this.value = ''; }" />
+						</li>
+
+						<li class="long">
+							<label>Email Address<span class="required"></span></label>                  
+							<input type="text" name="email" id="email" value="Email Address" 
+							class="requiredField email" onblur="if(this.value == '') { this.value = 'Email Address'; }" 
+							onfocus="if(this.value == 'Email Address') { this.value = ''; }" />                        
+						</li>
+
+						<li class="short">
+							<label>Telephone Number</label>
+							<input type="text" name="phone" id="phone" value="Telephone Number" 
+							class="requiredField" onblur="if(this.value == '') { this.value = 'Telephone Number'; }" 
+							onfocus="if(this.value == 'Telephone Number') { this.value = ''; }" />
+						</li>
+
+						<li class="textarea">
+							<label>Notes/Accommodations<span class="required"></span></label>
+							<textarea name="message" id="message" rows="20" cols="30"></textarea>
+						</li>
+
+						<li class="button"><input name="submitted" id="submitted" value="Submit" class="submit" type="submit" />
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="author">created by Eric Moore</div>
+	<script>
+		$(function() {
+			$.vegas({
+			src:'img/table.jpg'
+			});
+			$.vegas('overlay', {
+			src:'js/vegas/overlays/6.png'
+			});
+		});
+	</script>
+</body>
+</html>
