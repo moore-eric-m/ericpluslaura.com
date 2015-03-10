@@ -74,18 +74,18 @@ img {
     font-size: 88px;
     text-align: right;
 }
-ul {
+#rightbar ul {
     float: left;
     width: 120px;
 }
-li a {
+#rightbar li a {
     color: #0B3861;
     display: block;
     font-weight: bold;
     height: 14px;
     padding: 0 0 0 0;
 }
-li a:hover, li.cur a {
+#rightbar li a:hover, li.cur a {
     color: #6495ED;
 }
 .box {
@@ -233,3 +233,41 @@ iframe {
 tbody {
 
 }
+
+/* begin RSVP form */
+#contact-area {
+	width: 600px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+#contact-area label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+/* end RSVP form */
