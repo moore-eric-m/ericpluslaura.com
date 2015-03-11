@@ -235,16 +235,13 @@ tbody {
 }
 
 /* begin RSVP form */
-#contact-area {
-	width: 600px;
-	margin-top: 25px;
+#contact-area .form{
+	margin-top: 30px
 }
 
 #contact-area input, #contact-area textarea {
 	padding: 5px;
-	width: 471px;
-	font-family: Helvetica, sans-serif;
-	font-size: 1.4em;
+	width: 301px;
 	margin: 0px 0px 10px 0px;
 	border: 2px solid #ccc;
 }
@@ -257,9 +254,8 @@ tbody {
 	border: 2px solid #900;
 }
 
-#contact-area input.submit-button {
+#contact-area .submit {
 	width: 100px;
-	float: right;
 }
 
 #contact-area label {
@@ -268,6 +264,13 @@ tbody {
 	margin-right: 15px;
 	width: 100px;
 	padding-top: 5px;
-	font-size: 1.4em;
+}
+
+#contact-area .radio {
+
+}
+
+#contact-area .radio input {
+	width: 28px;
 }
 /* end RSVP form */

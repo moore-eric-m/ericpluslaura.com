@@ -1,17 +1,19 @@
 <?php
-$first = $_POST["first"];
-$last = $_POST["last"];
-$email = $_POST["email"];
-$company = $_POST["company"];
+$attend = $_POST["attend"];
+$name = $_POST["name"];
+$guests = $_POST["guests"];
 $phone = $_POST["phone"];
-$message = $_POST["message"];
-$text = "NAME: $first    $last <br>
+$email = $_POST["email"];
+$notes = $_POST["notes"];
+$text = "ATTEND?: $attend<br>
+ NAME: $name<br>
+ GUESTS: $guests<br>
+ PHONE: $phone<br> 
  EMAIL: $email<br>
- COMPANY: $company<br>
- TELEPHONE NUMBER: $phone<br>    
- MESSAGE: $message<br><hr><br><br><br>";
- $file = fopen("contactrequests.html","a+");
+ NOTES: $notes<br><hr><br><br><br>";
+ $file = fopen("../contactrequests.html","a+");
  fwrite($file, $text);
  fclose($file);
 
+print "<meta http-equiv=\"refresh\" content=\"0;URL=../contactthanks.html\">";
 ?>

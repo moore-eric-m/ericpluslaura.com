@@ -33,22 +33,45 @@
 		<div class="box">
 			<div id="contact-area">
 				<h2>RSVP</h2>
-				<form method="post" action="php/contactengine.php">
-					<label for="Name">Name:</label>
-					<input type="text" name="Name" id="Name" />
-					
-					<label for="City">Email:</label>
-					<input type="text" name="City" id="City" />
-		
-					<label for="Email">Phone:</label>
-					<input type="text" name="Email" id="Email" />
-					
-					<label for="Message">Notes:</label><br />
-					<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+				<form action="php/rsvp.php" id="contact_form" method="post">
 
-					<input type="submit" name="submit" value="Submit" class="submit-button" />
+					<ul class="form">               
+
+						<li class="radio">
+							<label>Attending?<span class="required"></span></label>
+							Yes<input type="radio" name="attend" class="radiobuttons" value="Yes"> &nbsp;&nbsp;&nbsp;
+							No<input type="radio" name="attend" class="radiobuttons" value="No">
+						</li>
+
+						<li class="short">
+							<label>Your Name<span class="required"></span></label>
+							<input type="text" name="name" id="name" value="Full Name" class="requiredField" onblur="if(this.value == '') { this.value = 'Last Name'; }" onfocus="if(this.value == 'Last Name') { this.value = ''; }" />
+						</li>
+
+						<li class="long">
+							<label>Guests' Names<span class="required"></span></label>                  
+							<input type="text" name="guests" id="guests" value="All others coming with you" class="requiredField email" onblur="if(this.value == '') { this.value = 'Email Address'; }" onfocus="if(this.value == 'Email Address') { this.value = ''; }" />                        </li>
+
+						<li class="short">
+							<label>Phone</label>
+							<input type="text" name="phone" id="phone" value="Phone Number" class="requiredField" onblur="if(this.value == '') { this.value = 'Company Name'; }" onfocus="if(this.value == 'Company Name') { this.value = ''; }" />
+						</li>
+
+						<li class="short">
+							<label>Email</label>
+							<input type="text" name="email" id="email" value="Email Address" class="requiredField" onblur="if(this.value == '') { this.value = 'Telephone Number'; }" onfocus="if(this.value == 'Telephone Number') { this.value = ''; }" />
+						</li>
+
+						<li class="textarea">
+							<label>Notes<span class="required"></span></label>
+							<textarea name="notes" id="notes" rows="20" cols="30"></textarea>
+						</li>
+
+						<li class="button"><input name="submitted" id="submitted" value="Submit" class="submit" type="submit" />
+						</li>
+					</ul>
 				</form>
-				
+						
 				<div style="clear: both;"></div>
 			
 			</div>
